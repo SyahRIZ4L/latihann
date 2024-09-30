@@ -1,96 +1,204 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.header {
-    background-image: url('Assets/pertengahan1.jpg');
+body {
+    font-family: Arial, sans-serif;
+    background-color: #10121b6b;
+    color: #ffffff;
+    line-height: 1.6;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Assets/barangsimpan.webp');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+    z-index: -1;
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    color: #000000;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.menu {
     display: flex;
-    justify-content: space-around;
-    background-color: #0288d1;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #1c1f2b;
+    z-index: 1000;
 }
 
-.menu a {
-    color: white;
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    margin: 0 15px;
+    color: #ffffff;
     text-decoration: none;
-    padding: 10px 15px;
+}
+
+.btn-login, .btn-signup, .btn-go {
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.menu a:hover {
-    background-color: #005f8a;
+.btn-login {
+    background-color: #242e5c;
+    color: white;
 }
 
-.content {
-    padding: 20px;
+.btn-signup {
+    background-color: #ff6c5c;
+    color: white;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #ffffff;
+.btn-go {
+    background-color: #360bacd7;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 5%;
+    margin-top: 80px;
+}
+
+.hero-content, .tasks {
+    flex-basis: 45%;
+}
+
+.badge {
+    background-color: #ff6c5c;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.tasks {
+    background-color: #1c1f2b;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.tasks h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.tasks ul {
+    list-style: none;
+}
+
+.tasks li {
+    margin-bottom: 15px;
+}
+
+.products {
+    padding: 60px 5%;
+    background-color: #1c1f2b;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background-color: #10121b;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h1 {
     text-align: center;
-    color: #0288d1;
+    width: 250px;
+    transition: transform 0.3s ease;
 }
 
-.contact-form form {
-    display: flex;
-    flex-direction: column;
+.product-item:hover {
+    transform: translateY(-5px);
 }
 
-.contact-form label {
-    margin-top: 10px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.contact-form button {
-    background-color: #0288d1;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #005f8a;
-}
-
-footer {
-    background-color: #0288d1;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+.product-item img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
+.product-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.product-item span {
+    font-weight: bold;
+    color: #ffffff;
+}

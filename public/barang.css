@@ -1,123 +1,264 @@
-/* barang_refined.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-:root {
-    --primary-color: #0288d1;
-    --secondary-color: #01579b;
-    --background-color: #e0f7fa;
-    --card-background: #ffffff;
-    --success-color: #43a047;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #1c1f2b;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-login, .btn-signup, .btn-go {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login {
+    background-color: #242e5c;
+    color: white;
+}
+
+.btn-signup {
+    background-color: #ff6c5c;
+    color: white;
+}
+
+.btn-go {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 5%;
+    margin-top: 80px;
+}
+
+.hero-content, .tasks {
+    flex-basis: 45%;
+}
+
+
+.small-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.tasks {
+    background-color: #1c1f2b;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.tasks h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.tasks ul {
+    list-style: none;
+}
+
+.tasks li {
+    margin-bottom: 15px;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .btn {
+    margin-right: 5px;
+  }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--secondary-color);
-    margin: 0;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Warna putih abu untuk latar belakang */
+    color: #333; /* Teks default hitam */
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom tetap */
-    gap: 2rem; /* Jarak antar kotak */
-    max-width: 1200px;
-    width: 100%;
+/* Product Card - Ukuran Kolom Kecil */
+.product-card {
+    background-color: #fff; /* Warna putih untuk kartu */
+    border: 1px solid #ccc; /* Warna abu untuk border kartu */
+    border-radius: 8px; /* Membuat sudut kartu membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut di bawah kartu */
+    margin-bottom: 20px;
+    width: 250px; /* Ukuran kartu diperkecil */
+    transition: transform 0.3s ease;
+    display:inline-table; /* Membuat setiap kartu sejajar */
+    margin-right: 15px; /* Spasi antar kartu */
 }
 
-/* Kartu produk */
-.card {
-    background-color: var(--card-background);
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column; /* Menyusun isi kartu secara vertikal */
-    height: 100%; /* Menjamin kartu mengisi seluruh ruang kontainer */
+.product-card:hover {
+    transform: translateY(-5px); /* Efek melayang saat hover */
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+/* Gambar Kotak Persegi Full */
+.product-image {
+    width: 100%; /* Gambar memenuhi lebar kartu */
+    height: 250px; /* Tinggi gambar disesuaikan */
+    object-fit: cover; /* Memastikan gambar proporsional */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; /* Membulatkan sudut gambar atas */
 }
 
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-    width: 100%;
+.product-info {
+    padding: 10px;
 }
 
-.card-body {
-    padding: 1.5rem;
-    flex: 1; /* Mengisi ruang yang tersedia setelah gambar */
+.product-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Teks hitam */
+    margin-bottom: 10px;
+    text-align: center; /* Teks rata tengah */
 }
 
-.card-title {
-    color: var(--primary-color);
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
+.product-description {
+    font-size: 12px;
+    color: #666; /* Teks abu-abu untuk deskripsi */
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.card-text {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
+.product-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #6a0dad; /* Warna ungu tua untuk harga */
+    margin-bottom: 15px;
+    text-align: center; /* Harga rata tengah */
 }
 
-.btn {
-    padding: 0.75rem 1.25rem;
-    border: none;
-    border-radius: 0.375rem;
-    cursor: pointer;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+/* Buttons - Small and Horizontal */
+.product-actions {
+    text-align: center; /* Tombol sejajar horizontal */
+}
+
+.product-actions .btn {
     display: inline-block;
-    min-width: 120px; /* Menjamin tombol tidak sempit */
-    text-align: center; /* Memastikan teks di tengah */
-    margin: 0.5rem 0; /* Margin vertikal agar tombol tidak terlalu rapat */
+    padding: 8px 15px; /* Ukuran tombol lebih kecil */
+    width: auto; /* Tombol auto-lebar, sesuai teks */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff; /* Teks putih di tombol */
+    cursor: pointer;
+    margin: 5px; /* Jarak antar tombol */
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-.btn-primary {
-    background-color: var(--primary-color);
-    color: white;
+.btn-detail {
+    background-color: #6a0dad; /* Ungu tua untuk tombol detail */
 }
 
-.btn-success {
-    background-color: var(--success-color);
-    color: white;
+.btn-edit {
+    background-color: #333; /* Tombol hitam untuk edit */
 }
 
-.btn-danger {
-    background-color: #d32f2f;
-    color: white;
+.btn-delete {
+    background-color: #ff0000; /* Tombol merah untuk delete */
+}
+
+.btn-cart {
+    background-color: #000; /* Tombol hitam untuk tambah ke keranjang */
 }
 
 .btn:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
+    opacity: 0.8; /* Sedikit transparan saat hover */
 }
 
-.col-md-12 {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    color: var(--primary-color);
+/* Form Handling */
+.delete-form, .cart-form {
+    display: inline-block; /* Agar form mengikuti format tombol */
+    margin-right: 5px;
 }
 
-@media (max-width: 1024px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar lebih kecil */
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr; /* 1 kolom pada layar kecil */
-        padding: 1rem;
-    }
+.delete-form:last-child, .cart-form:last-child {
+    margin-right: 0;
 }

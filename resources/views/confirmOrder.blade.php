@@ -70,7 +70,7 @@
             </div>
         </div>
         <div class="row">
-            <form action="{{ url('submit-order') }}" method="POST">
+            <form action="{{ url('/orderconfirm') }}" method="POST">
                 @csrf
             <div class="col-md-12 mb-4">
                 <div class="card">

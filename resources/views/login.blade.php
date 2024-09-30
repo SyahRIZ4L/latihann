@@ -1,45 +1,50 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .login-container {
-            max-width: 400px;
-            margin: 100px auto;
-        }
-    </style>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="{{asset('Assets/Path_Nihility.webp') }}" alt=logo" class="logo">
+            <h1>IXseed Marketplace</h1></div>
+    </header>
+
     <div class="container">
-        <div class="login-container">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h2 class="text-center mb-4">Login</h2>
-                    <form action="{{ url('login/process') }}" method="POST">
-                        @csrf
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Masuk</button>
-                        </div>
-                    </form>
+        <!-- Header Section -->
+        <div class="logo-container">
+            <img src="{{asset('Assets/hai.webp') }}" alt="Logo" class="logo">
+        </div>
+
+        <!-- Login Box -->
+        <div class="login-box">
+            <h2>Log In</h2>
+            <p>Don't have an account? <a href="register">Sign Up</a></p>
+
+            <!-- Login Form -->
+            <form action="{{ url ('login/process') }}" method="POST">
+                @csrf
+                <div class="input-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-            </div>
+
+                <div class="input-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <div class="forgot-password">
+                    <a href="register">Forgot your password?</a>
+                </div>
+            </form>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

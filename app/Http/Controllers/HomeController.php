@@ -228,7 +228,7 @@ class HomeController extends Controller
             $transaction->save();
         }
 
-        Cart::truncate();
+
 
         return redirect('order/confirm');
     }
@@ -238,6 +238,7 @@ class HomeController extends Controller
         ->join('barang','barang.barang_id','=','transaction.barang_id')
         ->orderBy('transaction.created_at')
         ->get();
+        Cart::truncate();
         // dd($trans);
         return view('confirmOrder', compact('trans'));
     }

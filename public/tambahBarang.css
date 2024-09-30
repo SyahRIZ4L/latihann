@@ -1,24 +1,27 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e0f7fa; /* Biru muda untuk latar belakang */
-    color: #333;
+    background-color:#0911316b; /* Biru muda untuk latar belakang */
+    color: #ffffff;
     margin: 0;
-    padding: 20px;
+    padding: px;
 }
 
 h2 {
-    color: #2196F3; /* Warna biru untuk judul */
+    color: #ffffff; /* Warna biru untuk judul */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    margin-top: 180px;
+    padding-top: 10px;
 }
 
 form {
-    background-color: #fff;
+    background-color: #272f5f;
     border-radius: 5px;
     padding: 20px;
     max-width: 400px;
     margin: 0 auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
 }
 
 label {
@@ -33,7 +36,7 @@ textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0 15px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #7e7070;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -43,7 +46,7 @@ input[type="file"] {
 }
 
 button[type="submit"] {
-    background-color: #2196F3; /* Warna biru untuk tombol */
+    background-color: #235c77; /* Warna biru untuk tombol */
     color: white;
     padding: 10px 15px;
     border: none;
@@ -54,4 +57,102 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #1976D2; /* Warna biru yang lebih gelap saat tombol di-hover */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #1c1f2b;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-login, .btn-signup, .btn-go {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login {
+    background-color: #242e5c;
+    color: white;
+}
+
+.btn-signup {
+    background-color: #ff6c5c;
+    color: white;
+}
+
+.btn-go {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 5%;
+    margin-top: 80px;
+}
+
+.hero-content, .tasks {
+    flex-basis: 45%;
+}
+
+
+.small-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+
 }

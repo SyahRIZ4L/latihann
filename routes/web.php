@@ -14,13 +14,14 @@ Route::post('/barang/tambah/process', [HomeController::class, 'prosesTambahBaran
 Route::get('/barang/edit/{id_barang}', [HomeController::class, 'editBarang']);
 Route::post('/barang/edit/process', [HomeController::class, 'editBarangProcess']);
 Route::delete('/barang/delete', [HomeController::class, 'hapusBarang']);
-Route::get('/stiker', [HomeController::class, 'stiker']);
+
 
 Route::post('cart/process', [HomeController::class, 'addToCart']);
 Route::get('cart', [HomeController::class, 'Cart']);
 Route::post('cart/update', [HomeController::class, 'updateCart']);
 Route::get('order/confirm', [HomeController::class, 'orderConfirm']);
 Route::post('/order/process', [HomeController::class, 'checkoutProcess']);
+Route::post('/orderconfirm', [HomeController::class, 'orderConfirm']);
 
 
 //authh
@@ -30,3 +31,4 @@ Route::get('/register', [AuthController::class, 'register']);
 Route::post('/register/process', [AuthController::class, 'reg']);
 Route::get('/logout', [AuthController::class, 'logout']);
 Route::post('customer/login/process', [AuthController::class, 'loginCustomer']);
+
