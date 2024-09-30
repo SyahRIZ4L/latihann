@@ -19,6 +19,8 @@ class AuthController extends Controller
 
         //cek database
         $user = admin::where('email', $email)->first();
+        // dd($user);
+
 
         //buatlah kondisi
         if($user && Hash::check($password, $user->password)){
