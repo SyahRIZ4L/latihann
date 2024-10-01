@@ -225,23 +225,42 @@ class HomeController extends Controller
             $subtotal = $keranjang->harga * $keranjang->qty;
             $total = $total =+ $subtotal;
             $transaction->total = $total;
+            $transaction->nama = "";
+            $transaction->alamat = "";
+            $transaction->email = "";
             $transaction->save();
         }
 
-
-
-        return redirect('order/confirm');
+        return redirect('/order/confirm');
     }
 
     public function orderConfirm(){
         $trans = Transaction::select('trans_code','nama_barang','qty','harga')
         ->join('barang','barang.barang_id','=','transaction.barang_id')
-        ->orderBy('transaction.created_at')
-        ->get();
+        ->orderBy('transaction.created_at','desc')
+        ->get()->take(1);
         Cart::truncate();
         // dd($trans);
         return view('confirmOrder', compact('trans'));
+
     }
+
+    function updateTransaction(Request $request){
+        $nama = $request->input('nama');
+        $alamat = $request->input('alamat');
+        $email = $request->input('email');
+        $trans_code = $request->input('trans_code');
+
+        $trans = Transaction::where('trans_code',$trans_code)->first();
+        $trans->nama = $nama;
+        $trans->alamat = $alamat;
+        $trans->email = $email;
+        $trans->save();
+        return redirect('barang');
+    }
+
+
+
 
 
 }

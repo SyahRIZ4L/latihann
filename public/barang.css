@@ -172,6 +172,7 @@ body {
     transition: transform 0.3s ease;
     display:inline-table; /* Membuat setiap kartu sejajar */
     margin-right: 15px; /* Spasi antar kartu */
+    margin-top: 100px;
 }
 
 .product-card:hover {

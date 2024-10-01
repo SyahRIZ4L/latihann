@@ -12,7 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('transaction', function (Blueprint $table) {
+            
             $table->increments('id_transaction');
+            $table->string('nama');
+            $table->string('email');
+            $table->text('alamat');
             $table->text('trans_code');
             $table->integer('barang_id');
             $table->integer('qty');

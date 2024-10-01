@@ -16,12 +16,17 @@ Route::post('/barang/edit/process', [HomeController::class, 'editBarangProcess']
 Route::delete('/barang/delete', [HomeController::class, 'hapusBarang']);
 
 
+
 Route::post('cart/process', [HomeController::class, 'addToCart']);
 Route::get('cart', [HomeController::class, 'Cart']);
 Route::post('cart/update', [HomeController::class, 'updateCart']);
 Route::get('order/confirm', [HomeController::class, 'orderConfirm']);
 Route::post('/order/process', [HomeController::class, 'checkoutProcess']);
 Route::post('/orderconfirm', [HomeController::class, 'orderConfirm']);
+Route::get('/barang/done', [HomeController::class, 'updateTransaction']);
+Route::post('/barang/done', [HomeController::class, 'updateTransaction']);
+
+
 
 
 //authh

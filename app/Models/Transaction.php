@@ -11,5 +11,5 @@ class Transaction extends Model
 
     protected $table = 'transaction';
     protected $primaryKey = 'id_transaction';
-    protected $fillable = ['trans_code','barang_id','qty','total'];
+    protected $fillable = ['nama','email','alamat','trans_code','barang_id','qty','total'];
 }

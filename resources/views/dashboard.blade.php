@@ -19,6 +19,7 @@
             <a href="barang">Products</a>
             <a href=cart>Cart</a>
             <a href="/barang/tambah">Add Products </a>
+            <a href="/barang/done">Riwayat pembelian</a>
             <a href="register" class="btn-signup">Logout</a>
         </nav>
     </header>

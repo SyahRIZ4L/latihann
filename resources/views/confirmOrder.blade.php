@@ -31,26 +31,26 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Online Shop</a>
+            <a class="navbar-brand" href="/dashboard">Online Shop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/dashboard">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="/barang">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cart</a>
+                        <a class="nav-link" href="/cart">Cart</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('login')}}">Signin</a>
+                        <a class="nav-link" href="{{url('login')}}">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('register')}}">Signup</a>
@@ -70,14 +70,14 @@
             </div>
         </div>
         <div class="row">
-            <form action="{{ url('/orderconfirm') }}" method="POST">
+            <form action="{{ url('/barang/done') }}" method="POST">
                 @csrf
             <div class="col-md-12 mb-4">
                 <div class="card">
                     <div class="card-body">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <input type="text" class="form-control" id="name" name="nama" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
@@ -85,7 +85,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="address" class="form-label">Alamat</label>
-                                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                                <textarea class="form-control" id="address" name="alamat" rows="3" required></textarea>
                             </div>
                     </div>
                 </div>
@@ -99,7 +99,8 @@
                         $subtotal = 0;
                         @endphp
                         @foreach($trans as $transaction)
-                        <p class="card-text">{{$transaction->nama_barang}} (x{{$transaction->qty}})</p>
+                        <p class="card-text">{{$transaction->nama_barang}} (x{{$transaction->qty}}) - Rp {{ number_format($transaction->harga, 0, ',', '.') }}</p>
+                        <input type="hidden" name="trans_code" value="{{$transaction->trans_code}}">
                         <hr/>
                         @php
                             $subtotal = $transaction->harga * $transaction->qty;
