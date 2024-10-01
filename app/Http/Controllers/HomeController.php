@@ -81,7 +81,7 @@ class HomeController extends Controller
         if($barang){
             return redirect('barang');
         }else{
-            return redirect('barang')->with('error','Aduh, ada kesalahan!');
+            return redirect('barang')->with('error',' Data gagal disimpan');
         }
     }
 
