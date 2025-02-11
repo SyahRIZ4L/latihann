@@ -94,6 +94,7 @@
 
 h1 {
     font-size: 2.5rem;
+    color: #fcfcfc;
 
 }
 
@@ -124,6 +125,7 @@ h1 {
 .card {
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
   }
 
   .card-img-top {
@@ -163,20 +165,23 @@ body {
 
 /* Product Card - Ukuran Kolom Kecil */
 .product-card {
-    background-color: #fff; /* Warna putih untuk kartu */
+    justify-content:baseline;
+    background-color: #ffffff; /* Warna putih untuk kartu */
     border: 1px solid #ccc; /* Warna abu untuk border kartu */
     border-radius: 8px; /* Membuat sudut kartu membulat */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut di bawah kartu */
     margin-bottom: 20px;
     width: 250px; /* Ukuran kartu diperkecil */
     transition: transform 0.3s ease;
-    display:inline-table; /* Membuat setiap kartu sejajar */
+
     margin-right: 15px; /* Spasi antar kartu */
     margin-top: 100px;
+
 }
 
 .product-card:hover {
     transform: translateY(-5px); /* Efek melayang saat hover */
+    justify-content: center;
 }
 
 /* Gambar Kotak Persegi Full */
@@ -186,6 +191,7 @@ body {
     object-fit: cover; /* Memastikan gambar proporsional */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px; /* Membulatkan sudut gambar atas */
+
 }
 
 .product-info {

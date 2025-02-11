@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 //homee
-route::get('/',[HomeController::class,'index']);
+route::get('/',[HomeController::class,'dashboard']);
 route::get('/dashboard',[HomeController::class,'dashboard']);
 route::get('/biodata',[HomeController::class,'biodata']);
 route::get('/barang',[HomeController::class,'tampilBarang']);
@@ -34,6 +34,6 @@ Route::get('/login', [AuthController::class, 'index']);
 Route::post('/login/process', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'register']);
 Route::post('/register/process', [AuthController::class, 'reg']);
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('customer/login/process', [AuthController::class, 'loginCustomer']);
 

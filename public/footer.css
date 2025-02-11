@@ -1,0 +1,111 @@
+footer {
+    width: 100%; /* Full width */
+
+    color: rgb(255, 255, 255); /* Text color */
+    text-align: center; /* Center align text */
+    position: relative; /* Positioning for absolute elements */
+    padding: 20px 0; /* Padding for better spacing */
+    margin-top: 50px;
+
+}
+
+
+.container {
+    display: flex;
+
+
+    /* Wrap items on smaller screens */
+    gap: 20px; /* Space between items */
+    justify-content: space-around; /* Center contents */
+    background-color: #10121b6b;
+}
+
+.footer-section {
+    flex: 1 1 200px; /* Flex-grow, shrink, base size */
+    text-align: justify; /* Justify text */
+    margin: 20px; /* Added margin for spacing */
+
+
+
+}
+
+.footer-logo {
+    max-width: 100px; /* Maximum width */
+    margin-bottom: 10px; /* Bottom margin */
+    margin-top: 100px;
+}
+
+.footer-section h3 {
+    color: #f27a1a; /* Header color */
+    margin-bottom: 10px; /* Margin */
+
+}
+
+.footer-section h4 {
+    color: #8baaee; /* Subheader color */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* No padding */
+}
+
+.footer-section ul li {
+    margin-bottom: 5px; /* Space between list items */
+
+}
+
+.footer-section .social-icons a {
+    display: inline-block; /* Inline block for icons */
+    margin-right: 10px; /* Space between icons */
+}
+
+.footer-section .social-icons img {
+    width: 24px; /* Icon size */
+    height: 24px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Align edges */
+
+
+}
+
+.footer-left {
+    flex: 1; /* Flex grow */
+    margin: 0 10px;
+}
+
+.footer-right {
+    flex: 1; /* Flex grow */
+    margin-top: 250px;
+}
+
+.footer-section {
+    margin-bottom: 20px; /* Space below sections */
+    display: flex; /* Mengaktifkan Flexbox */
+    flex-direction: column; /* Mengatur arah kolom */
+    justify-content: center; /* Menengahkan secara vertikal */
+    align-items: center; /* Menengahkan secara horizontal */
+    margin: 20px; /* Margin di sekitar elemen */
+    padding: 10px; /* Padding di dalam elemen */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center items */
+    }
+
+    .footer-section {
+        margin: 10px 0; /* Reduced margin for smaller screens */
+    }
+
+    .footer-left, .footer-right {
+        margin-left: 0; /* Remove left margin */
+    }
+
+
+}

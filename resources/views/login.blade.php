@@ -11,7 +11,16 @@
     <header class="header">
         <div class="logo">
             <img src="{{asset('Assets/Path_Nihility.webp') }}" alt=logo" class="logo">
-            <h1>IXseed Marketplace</h1></div>
+            <h1>login</h1>
+            </div>
+            <nav class="nav">
+                <a href="dashboard">Home</a>
+                {{-- <a href="barang">Barang</a> --}}
+                {{-- <a href=cart>Cart</a> --}}
+                {{-- <a href="/barang/tambah">Add Products </a> --}}
+                {{-- <a href="/barang/done">Riwayat pembelian</a> --}}
+                {{-- <a href="register" class="btn-signup">Logout</a> --}}
+            </nav>
     </header>
 
     <div class="container">
@@ -23,7 +32,7 @@
         <!-- Login Box -->
         <div class="login-box">
             <h2>Log In</h2>
-            <p>Don't have an account? <a href="register">Sign Up</a></p>
+            {{-- <p>Don't have an account? <a href="register">Sign Up</a></p> --}}
 
             <!-- Login Form -->
             <form action="{{ url ('login/process') }}" method="POST">
@@ -40,9 +49,9 @@
 
                 <button type="submit" class="login-btn">Login</button>
 
-                <div class="forgot-password">
+                {{-- <div class="forgot-password">
                     <a href="register">Forgot your password?</a>
-                </div>
+                </div> --}}
             </form>
         </div>
     </div>

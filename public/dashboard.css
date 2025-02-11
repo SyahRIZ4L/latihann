@@ -19,7 +19,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Assets/barangsimpan.webp');
+    background-image: url('Assets/BG3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,6 +60,8 @@ body::before {
 .nav {
     display: flex;
     align-items: center;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav a {
@@ -87,11 +89,16 @@ body::before {
 }
 
 .btn-go {
-    background-color: #360bacd7;
+    background-color: #7a9bda;
     color: #ffffff;
     text-decoration: none;
     display: inline-block;
     margin-top: 1rem;
+}
+.btn-go:hover {
+    background-color: #21887a; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks tetap putih */
+    cursor: pointer; /* Menunjukkan bahwa ini adalah tombol yang bisa diklik */
 }
 
 .hero-section {
@@ -100,6 +107,8 @@ body::before {
     align-items: center;
     padding: 100px 5%;
     margin-top: 80px;
+
+
 }
 
 .hero-content, .tasks {
@@ -117,11 +126,17 @@ body::before {
 
 .small-text {
     font-size: 0.9rem;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.0rem;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+
+
+
 
 }
 
@@ -151,7 +166,8 @@ h1 {
 
 .products {
     padding: 60px 5%;
-    background-color: #1c1f2b;
+    background-color: #10121b6b;
+
 }
 
 .products h2 {
@@ -178,6 +194,7 @@ h1 {
 
 .product-item:hover {
     transform: translateY(-5px);
+
 }
 
 .product-item img {
@@ -202,3 +219,82 @@ h1 {
     font-weight: bold;
     color: #ffffff;
 }
+
+.btn-pinjam {
+    background-color: #7a9bda; /* Warna latar belakang hijau */
+    color: white; /* Warna teks putih */
+    border: none; /* Tanpa border */
+    padding: 5px 10px; /* Padding atas-bawah dan kiri-kanan */
+    text-align: center; /* Teks di tengah */
+    text-decoration: none; /* Tanpa garis bawah */
+    display: inline-block; /* Agar bisa diatur ukuran */
+    font-size: 16px; /* Ukuran font */
+    border-radius: 5px; /* Sudut membulat */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+/* background-color: #1c1f2ba1; */
+.btn-pinjam:hover {
+    background-color: #21887a; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks tetap putih */
+    cursor: pointer; /* Menunjukkan bahwa ini adalah tombol yang bisa diklik */
+}
+
+
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column; /* Mengatur elemen dalam kolom */
+    align-items: center; /* Mengatur elemen agar berada di tengah */
+
+
+}
+
+.item {
+    display: flex;
+    align-items: center; /* Mengatur gambar dan teks agar sejajar secara vertikal */
+
+    background-color: #10121b;
+    background-size: auto;
+    padding: 20px; /* Menambah padding untuk item */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Mengatur lebar item */
+}
+
+.image-container {
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+    margin-top: 30px;
+}
+
+.rounded-image {
+    width: 150px; /* Atur ukuran gambar */
+    height: 150px; /* Atur ukuran gambar */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.text-container {
+    flex: 1; /* Mengizinkan teks untuk mengambil ruang yang tersisa */
+    text-align: left; /* Mengatur teks agar rata kiri */
+}
+.text-container2{
+    flex: 1; /* Mengizinkan teks untuk mengambil ruang yang tersisa */
+    text-align: right; /* Mengatur teks agar rata kiri */
+}
+
+
+h1 {
+    margin: 0 0 0px;
+}
+
+p {
+    margin: 0;
+
+}
+
+

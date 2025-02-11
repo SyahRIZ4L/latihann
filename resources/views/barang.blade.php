@@ -11,15 +11,20 @@
     <header class="header">
         <div class="logo">
             <img src="{{asset('Assets/Path_Nihility.webp') }}" alt=logo" class="logo">
-            <h1>IXseed Marketplace</h1>
+            <h1>Admin</h1>
         </div>
 
         <nav class="nav">
             <a href="dashboard">Home</a>
-            <a href="barang">Products</a>
-            <a href=cart>Cart</a>
+            {{-- <a href="barang">Products</a> --}}
+            {{-- <a href=cart>Cart</a> --}}
             <a href="/barang/tambah">Add Products </a>
-            <a href="register" class="btn-signup">Logout</a>
+            {{-- <a href="/login" class="btn-signup">Logout</a> --}}
+            <form action="{{ route('logout') }}" method="POST">
+    @csrf
+    <button class="btn-signup" type="submit">Logout</button>
+</form>
+
         </nav>
     </header>
 
@@ -38,6 +43,8 @@
         <div class="product-info">
             <h5 class="product-title">{{ $brg->nama_barang }}</h5>
             <p class="product-description">{{ $brg->deskripsi }}</p>
+            <p class="product-description">{{ $brg->stok }}</p>
+
             <p class="product-price">Rp {{ number_format($brg->harga, 0, ',', '.') }}</p>
             <div class="product-actions">
                 <a href="#" class="btn btn-detail">Detail</a>
@@ -48,12 +55,12 @@
                     <input type="hidden" name="id_barang" value="{{$brg->barang_id}}">
                     <button type="submit" class="btn btn-delete">Delete</button>
                 </form>
-                <form action="{{url('cart/process')}}" method="POST" class="cart-form">
+                {{-- <form action="{{url('cart/process')}}" method="POST" class="cart-form">
                     @csrf
                     <input type="hidden" name="barang_id" value="{{$brg->barang_id}}">
                     <input type="hidden" name="qty" value="1">
                     <button type="submit" class="btn btn-cart">Add to Cart</button>
-                </form>
+                </form> --}}
             </div>
         </div>
     </div>
@@ -63,6 +70,8 @@
     <p>No products found.</p>
 </div>
 @endforelse
+
+
 
 
 </body>

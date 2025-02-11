@@ -12,15 +12,15 @@
     <header class="header">
         <div class="logo">
             <img src="{{asset('Assets/Path_Nihility.webp') }}" alt=logo" class="logo">
-            <h1>IXseed Marketplace</h1>
+            <h1>Unit Produksi DKV</h1>
         </div>
 
         <nav class="nav">
-            <a href="/dashboard">Home</a>
-            <a href="/barang">Products</a>
-            <a href="/cart">Cart</a>
-            <a href="/barang/tambah">Add Products </a>
-            <a href="/register" class="btn-signup">Logout</a>
+            {{-- <a href="/dashboard">Home</a>
+            <a href="/barang">Products</a> --}}
+            {{-- <a href="/cart">Cart</a> --}}
+            {{-- <a href="/barang/tambah">Add Products </a> --}}
+            {{-- <a href="/register" class="btn-signup">Logout</a> --}}
         </nav>
     </header>
 

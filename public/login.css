@@ -124,18 +124,6 @@ body {
 
 
 
-.header {
-    position: fixed; /* Untuk membuat header tetap di atas */
-    top: 0; /* Posisi header di bagian paling atas layar */
-    left: 0; /* Agar menempel di sebelah kiri layar */
-    width: 100%; /* Lebar header sama dengan lebar layar */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #1c1f2b;
-    z-index: 1000; /* Agar header tetap di atas elemen lain */
-}
 
 .logo {
     display: flex;
@@ -154,16 +142,7 @@ h1 {
 }
 
 
-.nav {
-    display: flex;
-    align-items: center;
-}
 
-.nav a {
-    margin: 0 10px;
-    color: #ffffff;
-    text-decoration: none;
-}
 
 
 
@@ -200,4 +179,77 @@ h1 {
     color: #150b99;
     font-size: 16px;
     margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Mengatur elemen dalam kolom */
+    align-items: center; /* Mengatur elemen agar berada di tengah */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    margin-bottom: 20px; /* Jarak antara gambar dan teks */
+}
+
+.rounded-image {
+    width: 100%;
+    max-width: 200px; /* Atur ukuran maksimum gambar */
+    height: auto;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+}
+
+.text-container {
+    text-align: center; /* Mengatur teks agar berada di tengah */
+}
+
+h1 {
+    margin: 0 0 10px;
+}
+
+p {
+    margin: 0 0 10px; /* Jarak antara paragraf dan tombol */
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #1c1f2b;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    margin-left: 15px;
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav a {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
 }
